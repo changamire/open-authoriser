@@ -1,0 +1,16 @@
+{
+  "description": "",
+  "main": "auth.js",
+  "scripts": {
+    "build": "parcel build src/auth.js --target node --bundle-node-modules --no-source-maps",
+    "dist:add": "git add dist",
+    "release": "release-it --ci"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^2.0.5"
+  }
+}
