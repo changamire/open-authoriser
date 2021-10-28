@@ -1,5 +1,8 @@
 {
-  "description": "",
+  "name": "opena-authoriser",
+  "version": "0.0.1",
+  "description": "Open authoriser for AWS Lambda",
+  "repository": "https://github.com/changamire/open-authoriser.git",
   "main": "auth.js",
   "scripts": {
     "build": "parcel build src/auth.js --target node --bundle-node-modules --no-source-maps",
