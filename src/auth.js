@@ -35,6 +35,7 @@ function getToken(event) {
 export function decodeToken(token) {
   console.log(`Decode token`);
   const decoded = decode(token, { complete: true });
+  console.log(`Decoded token ${JSON.stringify(decoded)}`);
   if (!decoded || !decoded.header || !decoded.header.kid) {
     throw new Error("Invalid token");
   }
@@ -67,11 +68,13 @@ export async function handler(event) {
       issuer: process.env.TOKEN_ISSUER,
     });
 
-    return {
+    const result = {
       principalId: sub,
       policyDocument: generatePolicy(event.methodArn),
       context: { scope },
     };
+    console.log(`Result ${result}`);
+    return result;
   } catch (e) {
     console.log(e);
     return `Unauthorized ${e}`;

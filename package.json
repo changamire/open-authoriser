@@ -1,15 +1,25 @@
 {
-  "name": "opena-authoriser",
-  "version": "0.0.1",
-  "description": "Open authoriser for AWS Lambda",
+  "name": "@changamire/open-authoriser",
+  "version": "0.0.6",
+  "description": "Open authoriser for AWS Lambda authoriser on API Gateway",
   "repository": "https://github.com/changamire/open-authoriser.git",
   "main": "auth.js",
+  "type": "module",
   "scripts": {
     "build": "parcel build src/auth.js --target node --bundle-node-modules --no-source-maps",
     "dist:add": "git add dist",
-    "release": "release-it --ci"
+    "release": "release-it --ci",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    }
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.0",
+    "babel-jest": "^27.3.1",
+    "jest": "^27.3.1",
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
