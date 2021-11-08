@@ -9,7 +9,6 @@ const client = jwksRsa({
 });
 
 const getSigningKey = promisify(client.getSigningKey);
-
 const verifyToken = promisify(verify);
 
 function getToken(event) {

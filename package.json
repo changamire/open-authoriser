@@ -8,7 +8,7 @@
   "scripts": {
     "build": "parcel build src/auth.js --target node --bundle-node-modules --no-source-maps",
     "dist:add": "git add dist",
-    "release": "release-it --ci",
+    "release": "release-it",
     "test": "jest"
   },
   "jest": {
@@ -20,7 +20,8 @@
     "@babel/preset-env": "^7.16.0",
     "babel-jest": "^27.3.1",
     "jest": "^27.3.1",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "release-it": "^14.11.6"
   },
   "dependencies": {
     "jsonwebtoken": "^8.5.1",
