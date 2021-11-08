@@ -63,10 +63,11 @@ export async function handler(event) {
     const signingKey = await getSigningKey(decodedToken.header.kid);
     const publicKey = signingKey.getPublicKey();
     const { sub, scope } = await verifyToken(token, publicKey, {
-      audience: process.env.AUDIENCE,
+      //audience: process.env.AUDIENCE, //Cognito does not return audience in access tokens currently
       issuer: process.env.TOKEN_ISSUER,
     });
 
+    //Return Authorizer response format 2.0
     const result = {
       principalId: sub,
       policyDocument: generatePolicy(event.methodArn),
