@@ -1,6 +1,6 @@
 {
   "name": "@changamire/open-authoriser",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Open authoriser for AWS Lambda authoriser on API Gateway",
   "repository": "https://github.com/changamire/open-authoriser.git",
   "main": "auth.js",
