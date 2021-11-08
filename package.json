@@ -9,7 +9,7 @@
     "build": "parcel build src/auth.js --target node --bundle-node-modules --no-source-maps",
     "dist:add": "git add dist",
     "release": "release-it",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "transform": {
